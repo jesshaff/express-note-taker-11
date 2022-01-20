@@ -1,15 +1,12 @@
+// Dependencies 
+const express = require('express');
+const path = require('path');
+
+// Port
 const PORT = 3001;
 
+// Load express.js
 const app = express();
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static('public'));
-
-// GET route to get all of the notes from notes.html
-app.get('/notes', (req, res) => {
-  res.json(allNotes.slice(1))
-});
 
 // Listen for connections
 app.listen(PORT, () =>
