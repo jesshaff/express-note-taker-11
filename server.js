@@ -23,5 +23,5 @@ app.use('./', require('./middleware/html'));
 
 // Listen for connections
 app.listen(PORT, () =>
-  console.info(`Server listening at http://localhost:${PORT}...🚀`)
+  console.info(`Server listening at http://localhost:${PORT} 🚀`)
 );
