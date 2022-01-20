@@ -25,4 +25,3 @@ app.use('./', require('./middleware/html'));
 app.listen(PORT, () =>
   console.info(`Server listening at http://localhost:${PORT}...🚀`)
 );
-

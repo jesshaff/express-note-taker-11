@@ -2,7 +2,7 @@ const express = require('express');
 const uuid = require('uuid');
 const router = express.Router();
 
-let allNotes = require('./db/db.json');
+let allNotes = require('../db/db.json');
 
 router.get('/', (req, res) => res.json(data));
 
