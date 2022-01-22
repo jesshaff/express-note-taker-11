@@ -2,7 +2,7 @@ const express = require('express');
 const uuid = require('uuid');
 const router = express.Router();
 
-let allNotes = require('../db/db.json');
+let data = require('../db/db.json');
 
 router.get('/', (req, res) => res.json(data));
 
@@ -22,5 +22,14 @@ router.post('/', (req, res) => {
     };
 });
 
+router.delete('/:id', (req, res) => {
+    const found = data.some(obj => obj.id === req.params.id);
+    if (found) {
+        data = data.filter(obj => obj.id !== req.params.id);
+        res.json(data);
+    } else {
+        res.status(400).json(data);
+    };
+});
 
 module.exports = router;

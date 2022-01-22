@@ -1,7 +1,6 @@
 // Dependencies 
 const express = require('express');
 const path = require('path');
-const { ppid } = require('process');
 
 // PORT - to start server
 const PORT = 3001;
@@ -19,7 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/notes', require('./middleware/api'));
 
 // Mount middleware for html router
-app.use('./', require('./middleware/html'));
+app.use('/', require('./middleware/html'));
+
+app.get("/notes", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/notes.html"))
+);
 
 // Listen for connections
 app.listen(PORT, () =>
