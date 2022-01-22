@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 
 // PORT - to start server
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Load express.js
 const app = express();
@@ -20,7 +20,7 @@ app.use('/api/notes', require('./middleware/api'));
 // Mount middleware for html router
 app.use('/', require('./middleware/html'));
 
-app.get("/", (req, res) =>
+app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
