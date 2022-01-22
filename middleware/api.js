@@ -1,6 +1,7 @@
 const express = require('express');
 const uuid = require('uuid');
 const router = express.Router();
+const fs = require('fs');
 
 let data = require('../db/db.json');
 
@@ -12,13 +13,9 @@ router.post('/', (req, res) => {
     if (!newTitle || !newText) {
         res.status(400).json({msg: 'Need title and text input.'})
     } else {
-        const newJSON = {
-            id: uuid.v4(),
-            title: newTitle,
-            text: newText
-        };
-        data.push(newJSON);
-        res.json(data);
+        data.push(req.body);
+        fs.writeFileSync('./db/db.json', JSON.stringify(data), 'utf8');
+        res.json(true);
     };
 });
 
@@ -31,5 +28,5 @@ router.delete('/:id', (req, res) => {
         res.status(400).json(data);
     };
 });
-  
+
 module.exports = router;
