@@ -20,7 +20,7 @@ app.use('/api/notes', require('./middleware/api'));
 // Mount middleware for html router
 app.use('/', require('./middleware/html'));
 
-app.get("/notes", (req, res) =>
+app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
