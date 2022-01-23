@@ -21,15 +21,34 @@ npm install
 ```
 
 ## Usage
-This application is easy to use. Once the user enters a title and descriptive text body, a save button will appear in the top right of the webpage so that the user can save their new note. Once saved, the new note is displayed on the left of the webpage. The user can delete unwanted note by clicking on the red trash can icon. If the user wants to view the text body, they can simply click on the note and contents will be displayed.
+Run the following command to run the application:
+```
+npm start
+```
+Click ctrl + link in vs code after running npm start to open webpage. 
+```
+http://localhost:3001
+```
 
+
+This application is easy to use. Once the user enters a title and descriptive text body, a save button will appear in the top right of the webpage so that the user can save their new note. Once saved, the new note is displayed on the left of the webpage. 
+
+<br>
+The user can delete unwanted note by clicking on the red trash can icon. If the user wants to view the text body, they can simply click on the note and contents will be displayed.
+<br>
+
+[Deployed Application - Heroku](https://obscure-ravine-88519.herokuapp.com/)
+
+![Landing Page](public/assets/images/note-taker-landing-page.png)
+
+![Notes Input Page](public/assets/images/note-taker-input-page.png)
 ## Contributing
 No contributions are needed at this time.
 
 ## Tests
 Run the following command to run tests:
 ```
-npm start
+n/a
 ```
 
 ## Questions

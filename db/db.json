@@ -1,7 +1,17 @@
 [
   {
-    "title": "Groceries",
-    "text": "Eggs & milk",
-    "id": "c2c89f05-13b5-4872-acd3-ae2789e04d6b"
+    "title": "Call bank on Monday",
+    "text": "Ask about extra charge for insurance on car loan",
+    "id": "14160ce8-871a-4ec4-bbd2-cb9df54bc0bf"
+  },
+  {
+    "title": "Reschedule delivery",
+    "text": "FedEx package",
+    "id": "4829e08f-623b-4f8b-ac63-e0579fe3decd"
+  },
+  {
+    "title": "Submit homework",
+    "text": "Week 12 homework due Saturday, 1/29",
+    "id": "00f8c3e0-0f37-4808-8b15-06bb25d4646e"
   }
 ]
