@@ -21,6 +21,7 @@ router.post('/', (req, res) => {
         data.push(note1);
         fs.writeFileSync('./db/db.json', JSON.stringify(data), 'utf8');
         res.json(true);
+        console.log("New Note has been added!")
     };
 });
 
@@ -29,7 +30,7 @@ router.delete("/:id", (req, res) => {
       // Check for error
       if (err) throw err;
       let deleteId = req.params.id;
-      console.log(deleteId);
+      console.log("Note ID # " + deleteId + "has been deleted");
       // Handle data gathering for json update
       let notes = JSON.parse(data);
       notes.forEach((item, i) => {
